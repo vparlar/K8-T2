@@ -1,0 +1,5 @@
+# kubectl get nodes >> Ready-Nodes.txt
+
+NAME                                           STATUS   ROLES    AGE   VERSION
+gke-k8-newcluster-default-pool-636d6fc0-385w   Ready    <none>   9d    v1.13.11-gke.14
+gke-k8-newcluster-default-pool-636d6fc0-490r   Ready    <none>   9d    v1.13.11-gke.14
