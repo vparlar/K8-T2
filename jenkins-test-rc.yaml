@@ -1,0 +1,20 @@
+apiVersion: v1
+kind: ReplicationController
+metadata:
+  name: jenkins-test
+spec:
+  replicas: 1
+  selector:
+    app: jenkins-test-rc
+  template:
+    metadata:
+      name: jenkins-test-rc
+      labels:
+        app: jenkins-test-rc
+    spec:
+      containers:
+      - name: jenkins
+        image: jenkins
+        ports:
+        - containerPort: 80
+
