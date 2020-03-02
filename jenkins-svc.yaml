@@ -1,0 +1,14 @@
+apiVersion: v1
+kind: Service
+metadata:
+  name: jenkins-test
+spec:
+  type: NodePort
+  ports:
+  - name: jenkins
+    nodePort: 30080 # Listening port on External IPs
+    port: 8080 # Listening port on Internal IPs
+    protocol: TCP
+    targetPort: 80 # Pod’s listening port
+  selector:
+    app: jenkins-test-rc
